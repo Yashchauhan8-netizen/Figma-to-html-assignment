@@ -133,3 +133,154 @@ ul{
 .hero-image img{
     width:100%;
 }
+
+/* SECTION 2 */
+
+.compliance{
+    padding:100px 0 50px;
+}
+
+.compliance-top{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:60px;
+}
+
+.compliance-heading,
+.compliance-text{
+    width:50%;
+}
+
+.compliance-heading h2{
+    font-size:48px;
+    line-height:70px;
+    font-weight:600;
+}
+
+.compliance-heading span{
+    color:#4f5de4;
+}
+
+.compliance-text p{
+    font-size:18px;
+    line-height:32px;
+}
+
+.compliance-content{
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.compliance-image{
+    width:50%;
+}
+
+.compliance-image img{
+    width:100%;
+}
+
+.cards{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.card img{
+    width:24px;
+    height:24px;
+}
+
+.card h3{
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.card p{
+    font-size:18px;
+    line-height:32px;
+}
+
+@media(max-width:768px){
+
+    .nav-links,
+    .contact-btn{
+        display:none;
+    }
+
+    .menu-icon{
+        display:block;
+        cursor:pointer;
+    }
+
+    .hero-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+        line-height:50px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-list li{
+        justify-content:center;
+    }
+
+    .compliance-top{
+        flex-direction:column;
+    }
+
+    .compliance-heading,
+    .compliance-text{
+        width:100%;
+    }
+
+    .compliance-content{
+        flex-direction:column;
+    }
+
+    .compliance-image,
+    .cards{
+        width:100%;
+    }
+}
+
+.nav-links a:hover{
+    color:#4f5de4;
+    transition:.3s;
+}
+
+.contact-btn:hover,
+.primary-btn:hover{
+    opacity:.9;
+}
+
+.secondary-btn:hover{
+    background:#4f5de4;
+    color:#fff;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    gap:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    border:1px solid #4f5de4;
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
