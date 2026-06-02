@@ -13,7 +13,7 @@ body{
 
 .container{
     width:90%;
-    max-width:1200px;
+    max-width:1440px;
     margin:auto;
 }
 
@@ -25,6 +25,8 @@ ul{
     list-style:none;
 }
 
+/* HEADER */
+
 .header{
     background:#fff;
     padding:20px 0;
@@ -34,6 +36,7 @@ ul{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    position:relative;
 }
 
 .logo img{
@@ -48,6 +51,11 @@ ul{
 .nav-links a{
     color:#000;
     font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#4f5de4;
 }
 
 .contact-btn{
@@ -57,14 +65,22 @@ ul{
     padding:10px 20px;
     border-radius:5px;
     cursor:pointer;
+    transition:.3s;
+}
+
+.contact-btn:hover{
+    opacity:.9;
 }
 
 .menu-icon{
     display:none;
+    cursor:pointer;
 }
 
+/* HERO SECTION */
+
 .hero{
-    padding:60px 0;
+    padding:80px 0;
 }
 
 .hero-content{
@@ -93,6 +109,7 @@ ul{
     font-size:18px;
     line-height:32px;
     margin-bottom:25px;
+    max-width:650px;
 }
 
 .hero-list li{
@@ -117,6 +134,11 @@ ul{
     color:#fff;
     padding:12px 24px;
     border-radius:5px;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    opacity:.9;
 }
 
 .secondary-btn{
@@ -124,20 +146,29 @@ ul{
     color:#4f5de4;
     padding:12px 24px;
     border-radius:5px;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:#4f5de4;
+    color:#fff;
 }
 
 .hero-image{
     flex:1;
+    display:flex;
+    justify-content:flex-end;
 }
 
 .hero-image img{
-    width:100%;
+    width:95%;
+    max-width:650px;
 }
 
 /* SECTION 2 */
 
 .compliance{
-    padding:100px 0 50px;
+    padding:120px 0 80px;
 }
 
 .compliance-top{
@@ -169,7 +200,7 @@ ul{
 
 .compliance-content{
     display:flex;
-    gap:50px;
+    gap:70px;
     align-items:center;
 }
 
@@ -188,6 +219,16 @@ ul{
     gap:24px;
 }
 
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:24px;
+    display:flex;
+    gap:20px;
+    border:1px solid #eef0ff;
+    transition:all .3s ease;
+}
+
 .card img{
     width:24px;
     height:24px;
@@ -204,83 +245,106 @@ ul{
     line-height:32px;
 }
 
+.card:hover{
+    border:1px solid #4f5de4;
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(79,93,228,.12);
+}
+
+/* MOBILE */
+
 @media(max-width:768px){
 
-    .nav-links,
-    .contact-btn{
-        display:none;
-    }
 
-    .menu-icon{
-        display:block;
-        cursor:pointer;
-    }
-
-    .hero-content{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .hero-text h1{
-        font-size:40px;
-        line-height:50px;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .hero-list li{
-        justify-content:center;
-    }
-
-    .compliance-top{
-        flex-direction:column;
-    }
-
-    .compliance-heading,
-    .compliance-text{
-        width:100%;
-    }
-
-    .compliance-content{
-        flex-direction:column;
-    }
-
-    .compliance-image,
-    .cards{
-        width:100%;
-    }
+.container{
+    width:92%;
 }
 
-.nav-links a:hover{
-    color:#4f5de4;
-    transition:.3s;
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    text-align:center;
+    padding:20px 0;
+    display:none;
+    z-index:100;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.contact-btn:hover,
-.primary-btn:hover{
-    opacity:.9;
+.nav-links.active{
+    display:flex;
 }
 
-.secondary-btn:hover{
-    background:#4f5de4;
-    color:#fff;
+.contact-btn{
+    display:none;
+}
+
+.menu-icon{
+    display:block;
+}
+
+.hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:38px;
+    line-height:48px;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-list li{
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-list img{
+    width:18px;
+    height:18px;
+}
+
+.hero-image img{
+    width:85%;
+    margin:auto;
+    display:block;
+}
+
+.compliance-top{
+    flex-direction:column;
+}
+
+.compliance-heading h2{
+    font-size:34px;
+    line-height:48px;
+}
+
+.compliance-heading,
+.compliance-text,
+.compliance-image,
+.cards{
+    width:100%;
+}
+
+.compliance-content{
+    flex-direction:column;
+}
+
+.cards{
+    gap:18px;
 }
 
 .card{
-    background:#fff;
-    border-radius:12px;
     padding:20px;
-    display:flex;
-    gap:20px;
-    transition:.3s;
 }
 
-.card:hover{
-    border:1px solid #4f5de4;
-    transform:translateY(-5px);
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
 }
